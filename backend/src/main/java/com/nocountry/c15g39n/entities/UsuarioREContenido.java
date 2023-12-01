@@ -15,27 +15,26 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import java.util.Date;
 
 @Entity
-@Table(name = "videos")
+@Table(name = "usuariosre_contenidos")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class Video {
+public class UsuarioREContenido {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
-    private String nombre;
-    private String descripcion;
-    @Column(name = "url_video")
-    private String urlVideo;
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "fecha_registro")
-    private Date fechaRegistro;
+
+    @Column(name = "flag_contenido_realizado")
+    private Boolean flagContenidoRealizado;
+
+    @ManyToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JoinColumn(name = "usuario_ruta_etapa_id", nullable = false)
+    private UsuarioRutaEtapa usuarioRutaEtapa;
+
     @ManyToOne
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "contenido_id", nullable = false)

@@ -15,9 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import java.util.Date;
+
 
 @Entity
 @Table(name = "usuarios_rutas_etapas")
@@ -29,10 +27,6 @@ public class UsuarioRutaEtapa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "fecha_registro")
-    private Date fechaRegistro;
 
     @Column(name = "flag_etapa_realizada")
     private Boolean flagEtapaRealizada;
