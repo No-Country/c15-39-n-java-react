@@ -31,15 +31,11 @@ public class UsuarioServiceImpl implements IUsuarioService {
     private final PasswordEncoder passwordEncoder;
     @Override
     public UsuarioResponseDto registrarUsuario(UsuarioRequestDto usuarioRequestDto) {
-      /*  UsuarioResponseDto usuarioResponseDto = new UsuarioResponseDto();*/
-
-        Usuario usuario = new Usuario();
-        usuario = usuarioRequestToUsuario.toUsuario(usuarioRequestDto);
+        Usuario usuario = usuarioRequestToUsuario.toUsuario(usuarioRequestDto);
         usuario.setFechaRegistro(Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant()));
         usuario.setClave(passwordEncoder.encode(usuarioRequestDto.getClave()));
 
-        Rol rolAprendiz = new Rol();
-        rolAprendiz = rolRepository.findById(1L).orElse(null);
+        Rol rolAprendiz = rolRepository.findById(1L).orElse(null);
         usuario.setRol(rolAprendiz);
         usuarioRepository.save(usuario);
 

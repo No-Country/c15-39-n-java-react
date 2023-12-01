@@ -36,8 +36,6 @@ public class Usuario {
     private String nombre;
     @Column(name = "apellido", length = 100)
     private String apellido;
-    @Column(name = "documento_de_identidad", nullable = false, unique = true)
-    private String documentoDeIdentidad;
     @Column(name = "correo", nullable = false, unique = true)
     private String correo;
     private String clave;

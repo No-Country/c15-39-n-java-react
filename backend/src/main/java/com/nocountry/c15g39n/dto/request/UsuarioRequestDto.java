@@ -20,10 +20,6 @@ public class UsuarioRequestDto {
     @Size(min = 2, message = "El apellido debe tener al menos 2 caracteres")
     private String apellido;
 
-    @NotBlank(message = "El  documentoDeIdentidad es requerido")
-    @Pattern(regexp = "\\d+", message = "El documentoDeIdentidad debe ser númerico")
-    @Size(min = 5, message = "El documento de identidad debe tener al menos 5 numeros")
-    private String documentoDeIdentidad;
 
     @NotBlank(message = "El correo electrónico es requerido")
     @Email(message = "El correo electrónico debe ser válido")

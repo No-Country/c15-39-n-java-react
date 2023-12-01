@@ -1,6 +1,6 @@
 INSERT INTO roles(nombre, descripcion) VALUES('APRENDIZ', 'Rol de APRENDIZ');
 
-INSERT INTO usuarios (nombre, apellido, documento_de_identidad, correo, clave, fecha_registro, rol_id) VALUES ('Jarlin','Fonseca', '545454454', 'jarlinfonseca@gmail.com', '$2a$12$jrk350scTSD6wlmAtLfF1OeRPkVXCGtL7/33BkJwzXPaTJWYbVQeW', current_timestamp, 1);
+INSERT INTO usuarios (nombre, apellido, correo, clave, fecha_registro, rol_id) VALUES ('Jarlin','Fonseca', 'jarlinfonseca@gmail.com', '$2a$12$jrk350scTSD6wlmAtLfF1OeRPkVXCGtL7/33BkJwzXPaTJWYbVQeW', current_timestamp, 1);
 
 INSERT INTO rutas (nombre, descripcion) VALUES('Ruta de Backend', 'Esta es la ruta donde aprenderás mucho sobre Backend.');
 INSERT INTO rutas (nombre, descripcion) VALUES('Ruta de Frontend', 'Esta es la ruta donde aprenderás mucho sobre Frontend.');
@@ -14,5 +14,10 @@ INSERT INTO etapas (nombre, descripcion, ruta_id) VALUES('Introducción y fundam
 INSERT INTO etapas (nombre, descripcion, ruta_id) VALUES('Avanzando en el mundo de Frontend','Esta es la segunda etapa de esta ruta.', 2);
 INSERT INTO etapas (nombre, descripcion, ruta_id) VALUES('Conocimientos avanzados del Frontend','Esta es la tercera etapa de esta ruta.', 2);
 
-INSERT INTO videos (nombre, descripcion, url_video, fecha_registro, etapa_id) VALUES('Video de Backend', 'Descripcion del video', 'https://youtu.be/0Zb5fgO0ubE', current_timestamp,1)
-INSERT INTO videos (nombre, descripcion, url_video, fecha_registro, etapa_id) VALUES('Video de Frontend', 'Descripcion del video', 'https://youtu.be/q0UgClC8md4', current_timestamp,5)
+
+INSERT INTO contenidos (titulo, descripcion, etapa_id) VALUES('Contenido Backend', 'Descripcion del contenido', 1);
+INSERT INTO contenidos (titulo, descripcion, etapa_id) VALUES('Contenido Backend 2', 'Descripcion del contenido 2', 1);
+INSERT INTO contenidos (titulo, descripcion, etapa_id) VALUES('Contenido de Frontend', 'Descripcion del contenido', 5);
+
+INSERT INTO videos (nombre, descripcion, url_video, fecha_registro, contenido_id) VALUES('Video de Backend', 'Descripcion del video', 'https://youtu.be/0Zb5fgO0ubE', current_timestamp,1);
+INSERT INTO videos (nombre, descripcion, url_video, fecha_registro, contenido_id) VALUES('Video de Frontend', 'Descripcion del video', 'https://youtu.be/q0UgClC8md4', current_timestamp,3);
