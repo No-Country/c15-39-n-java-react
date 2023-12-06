@@ -20,19 +20,19 @@ import javax.persistence.TemporalType;
 import java.util.Date;
 
 @Entity
-@Table(name = "videos")
+@Table(name = "enlaces")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class Video {
+public class Enlace {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
     private String nombre;
     private String descripcion;
-    @Column(name = "url_video")
-    private String urlVideo;
+    @Column(name = "url_enlace")
+    private String urlEnlace;
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "fecha_registro")
     private Date fechaRegistro;
