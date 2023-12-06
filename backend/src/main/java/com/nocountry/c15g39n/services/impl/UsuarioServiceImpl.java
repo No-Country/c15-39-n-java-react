@@ -5,6 +5,7 @@ import com.nocountry.c15g39n.dto.response.UsuarioResponseDto;
 import com.nocountry.c15g39n.entities.Rol;
 import com.nocountry.c15g39n.entities.Usuario;
 import com.nocountry.c15g39n.exception.RolsNoExistenException;
+import com.nocountry.c15g39n.exception.UsuarioNoExistenException;
 import com.nocountry.c15g39n.mapper.UsuarioRequestToUsuario;
 import com.nocountry.c15g39n.mapper.UsuarioToReponseDto;
 import com.nocountry.c15g39n.repositories.RolRepository;
@@ -47,7 +48,7 @@ public class UsuarioServiceImpl implements IUsuarioService {
     }
     public List<Usuario> obtenerUsuarios() {
         List<Usuario> usuarios= usuarioRepository.findAll();
-        if(usuarios.isEmpty()) throw new RolsNoExistenException();
+        if(usuarios.isEmpty()) throw new UsuarioNoExistenException();
         return usuarios;
     }
 
