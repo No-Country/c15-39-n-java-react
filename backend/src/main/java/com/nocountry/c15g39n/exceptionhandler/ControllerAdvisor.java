@@ -64,6 +64,10 @@ public class ControllerAdvisor {
                 messageError = "mensaje";
                 messageException = "El aprendiz no tiene esa etapa asociada.";
                 break;
+            case "class com.nocountry.c15g39n.exception.UsuarioNoTieneContenidosAsociadosException":
+                messageError = "mensaje";
+                messageException = "El aprendiz no tiene ese contenido asociado.";
+                break;
             default:
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                         .body(Collections.singletonMap(exception.getClass().toString(), exception.getMessage()));
