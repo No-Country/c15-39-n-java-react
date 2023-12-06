@@ -1,6 +1,7 @@
 package com.nocountry.c15g39n.services.impl;
 
 import com.nocountry.c15g39n.dto.request.UsuarioRutaRequestDto;
+import com.nocountry.c15g39n.dto.response.ContenidoCompletadoResponseDto;
 import com.nocountry.c15g39n.entities.Contenido;
 import com.nocountry.c15g39n.entities.Etapa;
 import com.nocountry.c15g39n.entities.Ruta;
@@ -9,6 +10,9 @@ import com.nocountry.c15g39n.entities.UsuarioRuta;
 import com.nocountry.c15g39n.entities.UsuarioRutaEtapa;
 import com.nocountry.c15g39n.exception.RutaNoExisteException;
 import com.nocountry.c15g39n.exception.UsuarioAprendizNoAutenticadoException;
+import com.nocountry.c15g39n.exception.UsuarioNoTieneContenidosAsociadosException;
+import com.nocountry.c15g39n.exception.UsuarioNoTieneEtapaAsociadaException;
+import com.nocountry.c15g39n.exception.UsuarioNoTieneRutasAsocidasException;
 import com.nocountry.c15g39n.repositories.RutaRepository;
 import com.nocountry.c15g39n.repositories.UsuarioREContenidoRepository;
 import com.nocountry.c15g39n.repositories.UsuarioRutaEtapaRepository;
@@ -38,9 +42,7 @@ public class UsuarioREContenidoServiceImpl implements IUsuarioREContenidoService
 
     @Override
     public void registrarUsuarioREContenido(UsuarioRutaRequestDto usuarioRutaRequestDto) {
-        String bearerToken = token.getBearerToken();
-        if(bearerToken== null) throw new UsuarioAprendizNoAutenticadoException();
-        Long idAprendizAuth = token.getUsuarioAutenticadoId(bearerToken);
+        Long idAprendizAuth = validarUsuarioAutenticado();
         List<Long> idRutasDadas = usuarioRutaRequestDto.getIdRutas();
         for (Long idRuta : idRutasDadas) {
             Ruta ruta = rutaRepository.findById(idRuta).orElse(null);
@@ -62,11 +64,40 @@ public class UsuarioREContenidoServiceImpl implements IUsuarioREContenidoService
                 }
 
             }
-
-
         }
+    }
+
+    @Override
+    public ContenidoCompletadoResponseDto marcarContenidoCompletado(Long rutaId, Long etapaId, Long contenidoId) {
+        Long idAprendizAuth = validarUsuarioAutenticado();
+
+        Ruta ruta = rutaRepository.findById(rutaId).orElse(null);
+        if (ruta == null) throw new RutaNoExisteException();
+
+        UsuarioRuta usuarioRuta = usuarioRutaRepository.findByUsuarioIdAndRutaId(idAprendizAuth, ruta.getId()).orElse(null);
+        if(usuarioRuta==null) throw new UsuarioNoTieneRutasAsocidasException();
+
+        UsuarioRutaEtapa usuarioRutaEtapa = usuarioRutaEtapaRepository.findByUsuarioRutaIdAndEtapaId(usuarioRuta.getId(), etapaId).orElse(null);
+        if(usuarioRutaEtapa==null) throw new UsuarioNoTieneEtapaAsociadaException();
+
+        UsuarioREContenido usuarioREContenido= usuarioREContenidoRepository.findByUsuarioRutaEtapaIdAndContenidoId(usuarioRutaEtapa.getId(),contenidoId).orElse(null);
+        if(usuarioREContenido==null) throw new UsuarioNoTieneContenidosAsociadosException();
+
+        usuarioREContenido.setFlagContenidoRealizado(true);
+        usuarioREContenidoRepository.save(usuarioREContenido);
+
+        ContenidoCompletadoResponseDto contenidoCompletadoResponseDto = new ContenidoCompletadoResponseDto();
+        contenidoCompletadoResponseDto.setMensaje("El nivel ha sido marcado completado de forma correcta: "+usuarioREContenido.getContenido().getTitulo());
+
+        return contenidoCompletadoResponseDto;
+    }
+
+    private Long validarUsuarioAutenticado(){
+        String bearerToken = token.getBearerToken();
+        if(bearerToken== null) throw new UsuarioAprendizNoAutenticadoException();
+        return token.getUsuarioAutenticadoId(bearerToken);
+    }
 
 
-    }
-    }
+}
 

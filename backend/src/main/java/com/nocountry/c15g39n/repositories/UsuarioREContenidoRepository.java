@@ -19,7 +19,6 @@ public interface UsuarioREContenidoRepository extends JpaRepository<UsuarioRECon
             "AND flag_contenido_realizado=1")
     Optional<Long> obtenerCantidadContenidoRealizado(Long usuarioRutaEtapaId);
 
-    //Optional<List<UsuarioREContenido>> findAllByUsuarioRutaEtapaIdAndFlagContenidoRealizado(Long usuarioREId, Boolean flagContenidoRealizado);
-
+    Optional<UsuarioREContenido> findByUsuarioRutaEtapaIdAndContenidoId(Long usuarioRutaEtapaId, Long contenidoId);
 
 }
