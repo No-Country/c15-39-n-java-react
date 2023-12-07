@@ -21,4 +21,6 @@ public interface UsuarioREContenidoRepository extends JpaRepository<UsuarioRECon
 
     Optional<UsuarioREContenido> findByUsuarioRutaEtapaIdAndContenidoId(Long usuarioRutaEtapaId, Long contenidoId);
 
+    Optional<List<UsuarioREContenido>> findAllByUsuarioRutaEtapaId(Long usuarioRutaEtapaId);
+
 }

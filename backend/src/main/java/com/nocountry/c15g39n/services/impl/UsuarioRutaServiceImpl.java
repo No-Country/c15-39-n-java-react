@@ -21,6 +21,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -58,11 +59,17 @@ public class UsuarioRutaServiceImpl implements IUsuarioRutaService {
     }
 
     @Override
-    public List<UsuarioRuta> obtenerRutasAsociadasConUsuario() {
+    public List<Ruta> obtenerRutasAsociadasConUsuario() {
          Long idAprendizAuth = validarUsuarioAutenticado();
           List<UsuarioRuta> rutas = usuarioRutaRepository.findAllByUsuarioId(idAprendizAuth).orElse(null);
           if(rutas==null) throw new UsuarioNoTieneRutasAsocidasException();
-        return rutas;
+        return rutas.stream().map(usuarioRuta -> {
+            Ruta ruta = new Ruta();
+            ruta.setId(usuarioRuta.getRuta().getId());
+            ruta.setNombre(usuarioRuta.getRuta().getNombre());
+            ruta.setDescripcion(usuarioRuta.getRuta().getDescripcion());
+            return ruta;
+        }).collect(Collectors.toList());
     }
 
     private Long validarUsuarioAutenticado(){
