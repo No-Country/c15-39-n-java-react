@@ -15,36 +15,29 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import java.util.Date;
+
 
 @Entity
-@Table(name = "usuarios")
+@Table(name = "usuarios_rutas_etapas")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class Usuario {
-
-
+public class UsuarioRutaEtapa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
 
-    @Column(name = "nombre", length = 100)
-    private String nombre;
-    @Column(name = "apellido", length = 100)
-    private String apellido;
-    @Column(name = "correo", nullable = false, unique = true)
-    private String correo;
-    private String clave;
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "fecha_registro")
-    private Date fechaRegistro;
+    @Column(name = "flag_etapa_realizada")
+    private Boolean flagEtapaRealizada;
+
     @ManyToOne
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JoinColumn(name = "rol_id", nullable = false)
-    private Rol rol;
+    @JoinColumn(name = "usuario_ruta_id", nullable = false)
+    private UsuarioRuta usuarioRuta;
 
+    @ManyToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JoinColumn(name = "etapa_id", nullable = false)
+    private Etapa etapa;
 }
