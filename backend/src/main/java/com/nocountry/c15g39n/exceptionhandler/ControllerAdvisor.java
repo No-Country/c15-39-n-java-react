@@ -68,6 +68,10 @@ public class ControllerAdvisor {
                 messageError = "mensaje";
                 messageException = "El aprendiz no tiene ese contenido asociado.";
                 break;
+            case "class com.nocountry.c15g39n.exception.RutasIdNoEnviadoException":
+                messageError = "mensaje";
+                messageException = "No has enviado ningun ID de las rutas para realizar el filtro.";
+                break;
             default:
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                         .body(Collections.singletonMap(exception.getClass().toString(), exception.getMessage()));

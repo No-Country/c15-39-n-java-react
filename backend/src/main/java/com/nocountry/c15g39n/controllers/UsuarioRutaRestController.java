@@ -1,6 +1,7 @@
 package com.nocountry.c15g39n.controllers;
 
 import com.nocountry.c15g39n.dto.request.UsuarioRutaRequestDto;
+import com.nocountry.c15g39n.entities.Ruta;
 import com.nocountry.c15g39n.entities.UsuarioRuta;
 import com.nocountry.c15g39n.services.IUsuarioREContenidoService;
 import com.nocountry.c15g39n.services.IUsuarioRutaEtapaService;
@@ -38,7 +39,7 @@ public class UsuarioRutaRestController {
 
     @GetMapping("obtenerRutasAsociadas")
     @PreAuthorize("hasAuthority('APRENDIZ')")
-    public ResponseEntity<List<UsuarioRuta>> obtenerRutasAsociadas(){
+    public ResponseEntity<List<Ruta>> obtenerRutasAsociadas(){
         return ResponseEntity.ok().body(usuarioRutaService.obtenerRutasAsociadasConUsuario());
     }
 
