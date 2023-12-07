@@ -20,31 +20,24 @@ import javax.persistence.TemporalType;
 import java.util.Date;
 
 @Entity
-@Table(name = "usuarios")
+@Table(name = "enlaces")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class Usuario {
-
-
+public class Enlace {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
-
-    @Column(name = "nombre", length = 100)
     private String nombre;
-    @Column(name = "apellido", length = 100)
-    private String apellido;
-    @Column(name = "correo", nullable = false, unique = true)
-    private String correo;
-    private String clave;
+    private String descripcion;
+    @Column(name = "url_enlace")
+    private String urlEnlace;
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "fecha_registro")
     private Date fechaRegistro;
     @ManyToOne
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JoinColumn(name = "rol_id", nullable = false)
-    private Rol rol;
-
+    @JoinColumn(name = "contenido_id", nullable = false)
+    private Contenido contenido;
 }
