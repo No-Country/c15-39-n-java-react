@@ -2,6 +2,8 @@ package com.nocountry.c15g39n.services.impl;
 
 import com.nocountry.c15g39n.entities.Etapa;
 import com.nocountry.c15g39n.entities.Ruta;
+import com.nocountry.c15g39n.exception.EtapasNoExistenException;
+import com.nocountry.c15g39n.exception.RolsNoExistenException;
 import com.nocountry.c15g39n.exception.RutaNoExisteException;
 import com.nocountry.c15g39n.repositories.EtapaRepository;
 import com.nocountry.c15g39n.repositories.RutaRepository;
@@ -15,7 +17,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 @Transactional
-public class EtapaService implements IEtapaService {
+public class EtapaServiceIml implements IEtapaService {
 
     private final EtapaRepository etapaRepository;
     private final RutaRepository rutaRepository;
@@ -25,5 +27,10 @@ public class EtapaService implements IEtapaService {
         Ruta ruta = rutaRepository.findById(rutaId).orElse(null);
         if (ruta == null) throw new RutaNoExisteException();
         return etapaRepository.findAllByRuta_id(rutaId).orElseThrow();
+    }
+    public List<Etapa> obtenerEtapas() {
+        List<Etapa> etapas= etapaRepository.findAll();
+        if(etapas.isEmpty()) throw new EtapasNoExistenException();
+        return etapas;
     }
 }
