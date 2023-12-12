@@ -8,6 +8,8 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update
-      #ddl-auto: create
+      ddl-auto: ${DDL_AUTO}
     show-sql: true
+
+
+ACCESS_TOKEN_SECRET: ${ACCESS_TOKEN_SECRET}

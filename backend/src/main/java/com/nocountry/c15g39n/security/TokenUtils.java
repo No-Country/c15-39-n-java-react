@@ -4,8 +4,11 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -14,13 +17,16 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+@Component
+@RequiredArgsConstructor
 public class TokenUtils {
 
-    private final static String ACCESS_TOKEN_SECRET="4qhq8LrEBfYcaRHxhdb9zURb2rf8e7Ud";
+    @Value("${ACCESS_TOKEN_SECRET}")
+    private String ACCESS_TOKEN_SECRET;
 
     private final static Long ACCESS_TOKEN_VALIDITY_SECONDS = 21_600L;
 
-    public static String createToken(String nombre, String email, String rol, Long id){
+    public String createToken(String nombre, String email, String rol, Long id){
         long expirationTime = ACCESS_TOKEN_VALIDITY_SECONDS*1_000;
         Date expirationDate = new Date(System.currentTimeMillis()+expirationTime);
 
@@ -37,7 +43,7 @@ public class TokenUtils {
                 .compact();
     }
 
-    public static UsernamePasswordAuthenticationToken getAuthentication(String token){
+    public UsernamePasswordAuthenticationToken getAuthentication(String token){
         try {
             Claims claims = Jwts.parserBuilder()
                     .setSigningKey(ACCESS_TOKEN_SECRET.getBytes())
@@ -59,7 +65,7 @@ public class TokenUtils {
 
     }
 
-    public static String getCorreo(String token){
+    public String getCorreo(String token){
         try {
             Claims claims  = Jwts.parserBuilder()
                     .setSigningKey(ACCESS_TOKEN_SECRET.getBytes())
@@ -74,7 +80,7 @@ public class TokenUtils {
         }
     }
 
-    public static Long getUsuarioAutenticadoId(String token){
+    public Long getUsuarioAutenticadoId(String token){
         try {
             Claims claims  = Jwts.parserBuilder()
                     .setSigningKey(ACCESS_TOKEN_SECRET.getBytes())
@@ -89,7 +95,7 @@ public class TokenUtils {
         }
     }
 
-    public static String getUsuarioAutenticadoRol(String token){
+    public String getUsuarioAutenticadoRol(String token){
         try {
             Claims claims  = Jwts.parserBuilder()
                     .setSigningKey(ACCESS_TOKEN_SECRET.getBytes())
