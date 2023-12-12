@@ -29,11 +29,12 @@ public class SpringSecurityConfiguration {
     private final UserDetailsService userDetailsService;
     private final JWTAuthorizationFilter jwtAuthorizationFilter;
     private final PasswordEncoder passwordEncoder;
+    private final TokenUtils tokenUtils;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http, AuthenticationManager authManager) throws  Exception{
 
-        JWTAuthenticationFilter jwtAuthenticationFilter = new JWTAuthenticationFilter();
+        JWTAuthenticationFilter jwtAuthenticationFilter = new JWTAuthenticationFilter(tokenUtils);
         jwtAuthenticationFilter.setAuthenticationManager(authManager);
         jwtAuthenticationFilter.setFilterProcessesUrl("/login");
         return  http

@@ -1,5 +1,6 @@
 package com.nocountry.c15g39n.security;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
@@ -12,7 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Component
+@RequiredArgsConstructor
 public class JWTAuthorizationFilter  extends OncePerRequestFilter {
+    private final TokenUtils tokenUtils;
     @Override
     protected void doFilterInternal(HttpServletRequest request,
                                     HttpServletResponse response,
@@ -22,7 +25,7 @@ public class JWTAuthorizationFilter  extends OncePerRequestFilter {
 
         if(bearerToken!= null && bearerToken.startsWith("Bearer ")){
             String token = bearerToken.replace("Bearer", "");
-            UsernamePasswordAuthenticationToken usernamePAT = TokenUtils.getAuthentication(token);
+            UsernamePasswordAuthenticationToken usernamePAT = tokenUtils.getAuthentication(token);
             SecurityContextHolder.getContext().setAuthentication(usernamePAT);
         }
 
