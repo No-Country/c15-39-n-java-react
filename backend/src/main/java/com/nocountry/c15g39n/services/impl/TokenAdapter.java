@@ -14,6 +14,8 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 @RequiredArgsConstructor
 @Transactional
 public class TokenAdapter implements IToken {
+
+    private final TokenUtils tokenUtils;
     @Override
     public String getBearerToken() {
         return ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getHeader("Authorization");
@@ -22,18 +24,18 @@ public class TokenAdapter implements IToken {
     @Override
     public String getCorreo(String token) {
         if(token==(null)) throw  new NoDataFoundException();
-        return TokenUtils.getCorreo(token.replace("Bearer ",""));
+        return tokenUtils.getCorreo(token.replace("Bearer ",""));
     }
 
     @Override
     public Long getUsuarioAutenticadoId(String token) {
         if(token==(null)) throw  new NoDataFoundException();
-        return TokenUtils.getUsuarioAutenticadoId(token.replace("Bearer ",""));
+        return tokenUtils.getUsuarioAutenticadoId(token.replace("Bearer ",""));
     }
 
     @Override
     public String getUsuarioAutenticadoRol(String token) {
         if(token==(null)) throw  new NoDataFoundException();
-        return TokenUtils.getUsuarioAutenticadoRol(token.replace("Bearer ",""));
+        return tokenUtils.getUsuarioAutenticadoRol(token.replace("Bearer ",""));
     }
 }
