@@ -3,6 +3,9 @@ spring:
     url: ${URL_DB}
     username: ${USERNAME_DB}
     password: ${PASSWORD_DB}
+    hikari:
+      maximum-pool-size: 1
+      maximum-idle: 1
   application:
     name: backend
 
@@ -10,6 +13,7 @@ spring:
     hibernate:
       ddl-auto: ${DDL_AUTO}
     show-sql: true
+
 
 
 ACCESS_TOKEN_SECRET: ${ACCESS_TOKEN_SECRET}
