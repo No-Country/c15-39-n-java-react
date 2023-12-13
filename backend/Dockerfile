@@ -1,4 +1,4 @@
-ARG BUILD_IMAGE=gradle:6.8-jdk11
+ARG BUILD_IMAGE=gradle:6.7-jdk11
 ARG RUNTIME_IMAGE=openjdk:11-jdk-slim
 ARG PROFILE=dev
 
