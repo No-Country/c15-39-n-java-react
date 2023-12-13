@@ -1,4 +1,4 @@
-FROM gradle:6.7.1-jdk11 AS build
+FROM gradle:8.4.0-jdk11 AS build
 COPY . .
 RUN gradle build
 
