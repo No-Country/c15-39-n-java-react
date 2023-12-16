@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
 import { SectionPageError } from "./pages/SectionPageError/SectionPageError";
 import { Home } from "./pages/Home";
 /* import { Login } from "./pages/Login/Login";
@@ -7,7 +6,7 @@ import { Registro } from "./pages/Registro/Registro"; */
 import { TeamMembers } from "./pages/TeamMembers/TeamMembers";
 import { Dashboard } from "./pages/Dashboard/Dashboard";
 import { DashboardCardClicked } from "./pages/DashboardCardClicked/DashboardCardClicked";
-
+import "./styles/global.css";
 function App() {
   return (
     <>
