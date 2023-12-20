@@ -1,11 +1,11 @@
-/* import { Form } from "../components/contact-us/Form"; */
+import { Form } from "../components/contact-us/Form";
 import { FAQ } from "../components/FAQ/FAQ";
 import { Header } from "../components/Header/Header";
 import { NavLinkHome } from "../components/Navs/NavLinkHome";
 import { Hero } from "../components/Hero/Hero";
 import { NuestroServicio } from "../components/NuestroServicio/NuestroServicio";
-/* import { Footer } from "../components/footer/Footer"; */
-/* import { Caracteristicas } from "../components/Caracteristicas/Caracteristicas"; */
+import { Footer } from "../components/footer/Footer"; 
+import { Caracteristicas } from "../components/Caracteristicas/Caracteristicas";
 
 export const Home = () => {
   return (
@@ -14,11 +14,11 @@ export const Home = () => {
       <main>
         <Hero />
         <NuestroServicio />
-        {/* <Caracteristicas /> */}
+        <Caracteristicas />
         <FAQ />
-        {/* <Form /> */}
+        <Form />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

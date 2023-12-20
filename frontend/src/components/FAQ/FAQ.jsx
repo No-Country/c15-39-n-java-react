@@ -1,4 +1,3 @@
-import * as React from "react";
 import "./FAQ.css";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -32,7 +31,7 @@ export const FAQ = () => {
               </div>
             </Typography>
           </AccordionSummary>
-          <AccordionDetails style={{padding:"0 12px"}}>
+          <AccordionDetails style={{ padding: "0 12px" }}>
             <Typography>
               <div className="text-faq">
                 Para empezar, simplemente crea una cuenta en nuestra plataforma.
@@ -63,11 +62,13 @@ export const FAQ = () => {
             id="panel1a-header"
           >
             <Typography>
-              <div className="ask-faq">¿Ofrecen cursos gratuitos?</div>
+              <div className="ask-faq">
+                ¿los cursos que ofrecen en la pagina son gratuitos?
+              </div>
             </Typography>
           </AccordionSummary>
-          <AccordionDetails style={{padding:"0 12px"}}>
-            <Typography >
+          <AccordionDetails style={{ padding: "0 12px" }}>
+            <Typography>
               <div className="text-faq">
                 Todos los cursos que ofrecemos son una selección de cursos
                 gratuitos para que puedas explorar y descubrir nuevos temas sin
@@ -101,7 +102,7 @@ export const FAQ = () => {
               </div>
             </Typography>
           </AccordionSummary>
-          <AccordionDetails style={{padding:"0 12px"}}>
+          <AccordionDetails style={{ padding: "0 12px" }}>
             <Typography>
               <div className="text-faq">
                 Sí, entendemos que la vida puede ser ocupada. Puedes pausar tu
@@ -134,7 +135,7 @@ export const FAQ = () => {
               </div>
             </Typography>
           </AccordionSummary>
-          <AccordionDetails style={{padding:"0 12px"}}>
+          <AccordionDetails style={{ padding: "0 12px" }}>
             <Typography>
               <div className="text-faq">
                 Sí, una vez que hayas completado un curso, seguirás teniendo
