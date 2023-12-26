@@ -1,6 +1,7 @@
+import React from "react";
 import { Header } from "../../components/Header/Header";
 import { NavLinkEquipo } from "../../components/Navs/NavLinkEquipo";
-import { Footer } from "../../components/footer/Footer"; 
+import { Footer } from "../../components/footer/Footer";
 import "./TeamMembers.css";
 import { TeamCarrusel } from "../../components/TeamCarrusel/TeamCarrusel";
 
