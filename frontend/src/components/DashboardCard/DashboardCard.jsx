@@ -74,7 +74,15 @@ export const DashboardCard = ({ filteredTechs }) => {
   };
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="loader__container">
+        <img
+          className="loader"
+          src="../../../public/svg/loaders/puff.svg"
+          alt="loader"
+        />
+      </div>
+    );
   }
 
   if (error) {
