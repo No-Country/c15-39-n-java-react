@@ -105,3 +105,41 @@ Agradecemos a los siguientes colaboradores que han contribuido al desarrollo de 
 | <img src="https://github.com/JarlinFonseca.png" width="50" alt="Jarlin Andrés Fonseca"> | Jarlin Andrés Fonseca | Backend Developer  | [GitHub](https://github.com/JarlinFonseca) | [LinkedIn](https://www.linkedin.com/in/jarlin-andres-fonseca-bermon-58341523b/) | Backend  |
 | <img src="https://github.com/CindyMendoza.png" width="50" alt="Cindy Mendoza">          | Cindy Mendoza         | Backend Developer  | [GitHub](https://github.com/CindyMendoza)  | [LinkedIn](https://www.linkedin.com/in/mendozacindy/)                           | Backend  |
 | <img src="https://github.com/Belentaborda.png" width="50" alt="Maria Belen Taborda">    | Maria Belen Taborda   | Backend Developer  | [GitHub](https://github.com/Belentaborda)  | [LinkedIn](https://www.linkedin.com/in/mbelen-taborda/)                         | Backend  |
+
+
+## Diseño de la pagina
+
+El proceso de planeacion para el maquetado de la pagina pricipal y todas sus secciones fue diseñado en figma.
+
+<div align="center">
+
+<a href="https://www.figma.com/file/hBMoA4veWOoW17lF9ptEdJ/CodeJourney?type=design&node-id=0-1&mode=design" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png" alt="react" width="60" height="70"/> </a>
+
+link del figma 
+</div>
+
+
+<img src="https://media.licdn.com/dms/image/D4D22AQHMKYrV7sEykQ/feedshare-shrink_2048_1536/0/1701699580303?e=1705536000&v=beta&t=Q4DEwxoCpTtUO14Lm5-bNcclB-f14zXC1bqTYbmjV08" align="center">
+
+
+## Modelo entidad relacion
+
+Durante la etapa de planificacion se pudo establecer la conexcion y relacion que tendran las tablas
+
+<img src="" align="center">
+
+<img src="https://jfwiki.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fb1ebc1c3-94b3-4275-9d18-9ee087780b8d%2F23b06d51-82ff-4ad3-ad64-016110071c26%2FDiagrama_de_flujo_backend.png?table=block&id=f8064a18-f134-4c14-99b0-ce5d19b077fe&spaceId=b1ebc1c3-94b3-4275-9d18-9ee087780b8d&width=2000&userId=&cache=v2" align="center">
+
+## Divicion y gestion de las tareas
+
+Las tareas se repartieron por medio de la herramienta trello, en donde se sub-divideieron las tareas a realizar por ambas partes:
+
+### Backend:
+
+<img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fb1ebc1c3-94b3-4275-9d18-9ee087780b8d%2F09de68f3-0f93-48eb-95da-6e6d9973a76d%2FOpera_Instantnea_2023-12-18_173610_trello.com.png?table=block&id=a71968fa-48a3-43e1-8762-8f7134960b55&spaceId=b1ebc1c3-94b3-4275-9d18-9ee087780b8d&width=2000&userId=f9ff9f9c-08ea-4d00-92ed-4f9cc1d45079&cache=v2" align="center">
+
+### Frontend:
+
+<img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fb1ebc1c3-94b3-4275-9d18-9ee087780b8d%2Fdd2e5dcf-62b1-44e4-8d42-fac148832992%2FOpera_Instantnea_2023-12-18_173410_trello.com.png?table=block&id=8d408705-e6f6-4ba1-850f-2f210708c4fb&spaceId=b1ebc1c3-94b3-4275-9d18-9ee087780b8d&width=2000&userId=f9ff9f9c-08ea-4d00-92ed-4f9cc1d45079&cache=v2" align="center">
+
+
