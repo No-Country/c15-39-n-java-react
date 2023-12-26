@@ -1,16 +1,34 @@
-# Code Journey
+<img src="https://github.com/SofiDevO/proyecto--fullstack/assets/149741364/7e5980ba-a1d5-4f4e-b72c-0f335c4d092f" align="center">
 
 ## Descripción del Proyecto
 
 Este repositorio es parte del proyecto Code Journey, un proyecto privado. Se trata de una aplicación frontend y backend desarrollada con tecnologías modernas como React, TypeScript, Vite, y otras. Proporciona una interfaz de usuario atractiva y funcional para diversas funcionalidades.
 
-## Contenido
+
+
+## Desarrolladores
+
+Agradecemos a los siguientes colaboradores que han contribuido al desarrollo de este proyecto:
+
+| Imagen                                                                                  | Nombre                | Descripción        | GitHub                                     | LinkedIn                                                                        | Equipo   |
+| --------------------------------------------------------------------------------------- | --------------------- | ------------------ | ------------------------------------------ | ------------------------------------------------------------------------------- | -------- |
+| <img src="https://github.com/DiegoRivasDev.png" width="50" alt="Diego Rivas">           | Diego Rivas           | Frontend Developer | [GitHub](https://github.com/DiegoRivasDev) | [LinkedIn](https://www.linkedin.com/in/diego-rivas-96215129a/)                  | Frontend |
+| <img src="https://github.com/SofiDevO.png" width="50" alt="Sofia Osorio">               | Sofia Osorio          | Frontend           | [GitHub](https://github.com/SofiDevO)      | [LinkedIn](https://www.linkedin.com/in/sofidev/)                                | Frontend |
+| <img src="https://github.com/cotamo1901.png" width="50" alt="John Alexander">           | John Alexander        | Frontend Developer | [GitHub](https://github.com/cotamo1901)    | [LinkedIn](https://www.linkedin.com/in/john-alexander-cotamo-molina-463005144/) | Frontend |
+| <img src="https://github.com/sexga.png" width="50" alt="Sebastian Chavez">              | Sebastian Chavez      | Tester manual      | [GitHub](https://github.com/sexga)         | [LinkedIn](https://www.linkedin.com/in/sebastianxgabriel/)                      | Tester   |
+| <img src="https://github.com/JarlinFonseca.png" width="50" alt="Jarlin Andrés Fonseca"> | Jarlin Andrés Fonseca | Backend Developer  | [GitHub](https://github.com/JarlinFonseca) | [LinkedIn](https://www.linkedin.com/in/jarlin-andres-fonseca-bermon-58341523b/) | Backend  |
+| <img src="https://github.com/CindyMendoza.png" width="50" alt="Cindy Mendoza">          | Cindy Mendoza         | Backend Developer  | [GitHub](https://github.com/CindyMendoza)  | [LinkedIn](https://www.linkedin.com/in/mendozacindy/)                           | Backend  |
+| <img src="https://github.com/Belentaborda.png" width="50" alt="Maria Belen Taborda">    | Maria Belen Taborda   | Backend Developer  | [GitHub](https://github.com/Belentaborda)  | [LinkedIn](https://www.linkedin.com/in/mbelen-taborda/)                         | Backend  |
+
+
+
+  ## Contenido
+
 
 - [Instalación](#instalación)
 - [Scripts Disponibles](#scripts-disponibles)
 - [Tech Stack](#tech-stack)
 - [Dependencias Principales](#dependencias-principales)
-- [Desarrolladores](#desarrolladores)
 - [Estructura del Proyecto Backend](#estructura-del-proyecto-backend)
 
 ## Instalación
@@ -92,21 +110,6 @@ La tecnología utilizada en este proyecto incluye:
 - [slick-carousel](https://www.npmjs.com/package/slick-carousel): ^1.8.1
 - [styled-components](https://www.npmjs.com/package/styled-components): ^6.1.1
 
-## Desarrolladores
-
-Agradecemos a los siguientes colaboradores que han contribuido al desarrollo de este proyecto:
-
-| Imagen                                                                                  | Nombre                | Descripción        | GitHub                                     | LinkedIn                                                                        | Equipo   |
-| --------------------------------------------------------------------------------------- | --------------------- | ------------------ | ------------------------------------------ | ------------------------------------------------------------------------------- | -------- |
-| <img src="https://github.com/DiegoRivasDev.png" width="50" alt="Diego Rivas">           | Diego Rivas           | Frontend Developer | [GitHub](https://github.com/DiegoRivasDev) | [LinkedIn](https://www.linkedin.com/in/diego-rivas-96215129a/)                  | Frontend |
-| <img src="https://github.com/SofiDevO.png" width="50" alt="Sofia Osorio">               | Sofia Osorio          | Frontend           | [GitHub](https://github.com/SofiDevO)      | [LinkedIn](https://www.linkedin.com/in/sofidev/)                                | Frontend |
-| <img src="https://github.com/cotamo1901.png" width="50" alt="John Alexander">           | John Alexander        | Frontend Developer | [GitHub](https://github.com/cotamo1901)    | [LinkedIn](https://www.linkedin.com/in/john-alexander-cotamo-molina-463005144/) | Frontend |
-| <img src="https://github.com/sexga.png" width="50" alt="Sebastian Chavez">              | Sebastian Chavez      | Tester manual      | [GitHub](https://github.com/sexga)         | [LinkedIn](https://www.linkedin.com/in/sebastianxgabriel/)                      | Tester   |
-| <img src="https://github.com/JarlinFonseca.png" width="50" alt="Jarlin Andrés Fonseca"> | Jarlin Andrés Fonseca | Backend Developer  | [GitHub](https://github.com/JarlinFonseca) | [LinkedIn](https://www.linkedin.com/in/jarlin-andres-fonseca-bermon-58341523b/) | Backend  |
-| <img src="https://github.com/CindyMendoza.png" width="50" alt="Cindy Mendoza">          | Cindy Mendoza         | Backend Developer  | [GitHub](https://github.com/CindyMendoza)  | [LinkedIn](https://www.linkedin.com/in/mendozacindy/)                           | Backend  |
-| <img src="https://github.com/Belentaborda.png" width="50" alt="Maria Belen Taborda">    | Maria Belen Taborda   | Backend Developer  | [GitHub](https://github.com/Belentaborda)  | [LinkedIn](https://www.linkedin.com/in/mbelen-taborda/)                         | Backend  |
-
-
 ## Diseño de la pagina
 
 El proceso de planeacion para el maquetado de la pagina pricipal y todas sus secciones fue diseñado en figma.
@@ -119,16 +122,15 @@ link del figma
 </div>
 
 
-<img src="https://media.licdn.com/dms/image/D4D22AQHMKYrV7sEykQ/feedshare-shrink_2048_1536/0/1701699580303?e=1705536000&v=beta&t=Q4DEwxoCpTtUO14Lm5-bNcclB-f14zXC1bqTYbmjV08" align="center">
+<img src="https://github.com/SofiDevO/proyecto--fullstack/assets/149741364/86ea4c2a-eb47-4f6e-ba09-9ad93f26c1be" align="center">
 
 
 ## Modelo entidad relacion
 
 Durante la etapa de planificacion se pudo establecer la conexcion y relacion que tendran las tablas
 
-<img src="" align="center">
 
-<img src="https://jfwiki.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fb1ebc1c3-94b3-4275-9d18-9ee087780b8d%2F23b06d51-82ff-4ad3-ad64-016110071c26%2FDiagrama_de_flujo_backend.png?table=block&id=f8064a18-f134-4c14-99b0-ce5d19b077fe&spaceId=b1ebc1c3-94b3-4275-9d18-9ee087780b8d&width=2000&userId=&cache=v2" align="center">
+<img src="https://github.com/SofiDevO/proyecto--fullstack/assets/149741364/86d3dce0-3526-4df1-b7fa-cc3e9fa1f680" align="center">
 
 ## Divicion y gestion de las tareas
 
@@ -136,10 +138,10 @@ Las tareas se repartieron por medio de la herramienta trello, en donde se sub-di
 
 ### Backend:
 
-<img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fb1ebc1c3-94b3-4275-9d18-9ee087780b8d%2F09de68f3-0f93-48eb-95da-6e6d9973a76d%2FOpera_Instantnea_2023-12-18_173610_trello.com.png?table=block&id=a71968fa-48a3-43e1-8762-8f7134960b55&spaceId=b1ebc1c3-94b3-4275-9d18-9ee087780b8d&width=2000&userId=f9ff9f9c-08ea-4d00-92ed-4f9cc1d45079&cache=v2" align="center">
+<img src="https://github.com/SofiDevO/proyecto--fullstack/assets/149741364/047ed5ba-9ac4-40bb-892b-332f4596ec73" align="center">
 
 ### Frontend:
 
-<img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fb1ebc1c3-94b3-4275-9d18-9ee087780b8d%2Fdd2e5dcf-62b1-44e4-8d42-fac148832992%2FOpera_Instantnea_2023-12-18_173410_trello.com.png?table=block&id=8d408705-e6f6-4ba1-850f-2f210708c4fb&spaceId=b1ebc1c3-94b3-4275-9d18-9ee087780b8d&width=2000&userId=f9ff9f9c-08ea-4d00-92ed-4f9cc1d45079&cache=v2" align="center">
+<img src="https://github.com/SofiDevO/proyecto--fullstack/assets/149741364/8e8764df-b97b-4554-a0df-ddf43c460573" align="center">
 
 

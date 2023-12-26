@@ -1,3 +1,4 @@
+import * as React from "react";
 import "./FAQ.css";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";

@@ -21,7 +21,7 @@ video {
   justify-content: center;
   flex-direction: column;
   margin-top: -58px;
-
+  /* transition: 1s ease; */
 }
 
 /* opacidad al video */
@@ -29,6 +29,7 @@ video {
   z-index: 11;
   content: "";
   position: absolute;
+  /* background: #16161669; */
   width: 100%;
   height: 100dvh;
   top: 0;
@@ -51,7 +52,10 @@ video {
   width: 72px;
   font-weight: bold;
   font-family: var(--main-font);
-
+/*   background: var( --text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 .hero .content h1 {
