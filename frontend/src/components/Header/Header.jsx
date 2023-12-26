@@ -1,28 +1,34 @@
 import { useEffect } from "react";
 import { Boton } from "../Boton/Boton";
+import Cookies from "js-cookie";
 import "./Header.css";
 import { Logo } from "../Logo/Logo";
 
 export const Header = (props) => {
+  const token = Cookies.get("token");
+
+  const handleRegisterClick = () => {};
+
   useEffect(() => {
-    const d = document;
-    function handleClick(e) {
+    const handleClick = (e) => {
+      const panel = document.querySelector(".panel");
+      const panelBtn = document.querySelector(".panel-btn");
+
       if (e.target.matches(".panel-btn") || e.target.matches(".panel-btn *")) {
-        d.querySelector(".panel").classList.toggle("is-active");
-        d.querySelector(".panel-btn").classList.toggle("is-active");
+        panel.classList.toggle("is-active");
+        panelBtn.classList.toggle("is-active");
       }
 
       if (e.target.matches(".header__menu-link")) {
-        d.querySelector(".panel").classList.remove("is-active");
-        d.querySelector(".panel-btn").classList.remove("is-active");
+        panel.classList.remove("is-active");
+        panelBtn.classList.remove("is-active");
       }
-    }
+    };
 
-    d.addEventListener("click", handleClick);
+    document.addEventListener("click", handleClick);
 
-    // Devuelve una función de limpieza que se ejecuta cuando el componente se desmonta
     return () => {
-      d.removeEventListener("click", handleClick);
+      document.removeEventListener("click", handleClick);
     };
   }, []);
 
@@ -30,20 +36,32 @@ export const Header = (props) => {
     <>
       <header className="header">
         <Logo />
-        <nav className="menu  panel ">
+        <nav className="menu panel">
           <ul className="header__list">
             {props.navlink}
             <div className="btn__container">
-              <Boton
-                text="Login"
-                className="header__btn--register"
-                link="/login"
-              />
-              <Boton
-                text="Registrarse"
-                className="header__btn--login"
-                link="/registro"
-              />
+              {token && (
+                <Boton
+                  className="header__btn--register"
+                  text="Dashboard"
+                  link="/dashboard"
+                />
+              )}
+              {!token && (
+                <>
+                  <Boton
+                    text="Login"
+                    className="header__btn--register"
+                    link="/login"
+                  />
+                  <Boton
+                    text="Registrarse"
+                    className="header__btn--login"
+                    link="/registro"
+                    onClick={handleRegisterClick}
+                  />
+                </>
+              )}
             </div>
           </ul>
         </nav>
