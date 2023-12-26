@@ -96,6 +96,12 @@ svg.css-i4bv87-MuiSvgIcon-root {
   font-size: 2.5rem;
 }
 
+.loader__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+}
 @media screen and (max-width: 768px) {
   /* scrollbar  */
   body::-webkit-scrollbar {
