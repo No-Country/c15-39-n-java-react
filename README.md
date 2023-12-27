@@ -82,8 +82,10 @@ La tecnología utilizada en este proyecto incluye:
 - **Backend**
 
   - [Spring Boot](https://spring.io/projects/spring-boot)
-    > [!WARNING]
-    > (Inferido a partir del archivo .gitignore. El team de backend debe agregar la información completa)
+  - [Postman](https://www.postman.com/)
+  - [Docker](https://www.docker.com/)
+  - [MySql](https://www.mysql.com/)
+  - [Amazon AWS RDS y EC2](https://aws.amazon.com/)
 
 - **Herramientas y Utilidades**:
   - [Vite](https://www.npmjs.com/package/vite): ^5.0.0
